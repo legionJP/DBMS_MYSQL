@@ -92,6 +92,12 @@ select * from emp where sal between 3000 and 4000;
 select * from emp where comm is not null ;
 select * from emp where ename like 'A%';
 select * from emp where ename like '%A%' ;
+select * from emp where ename like '%A%A%';
+
+select * from emp where hiredate like '%12%;
+select * from emp where hiredate like '%-12-%'
+--it will skip date and year
+
 
 
 
