@@ -97,6 +97,9 @@ select * from emp where ename like '%A%A%';
 select * from emp where hiredate like '%12%;
 select * from emp where hiredate like '%-12-%'
 --it will skip date and year
+     
+select empno , ename from emp where ename like '_A%';
+select empno , ename from emp where ename like '____';
 
 
 
