@@ -81,3 +81,18 @@ INSERT INTO dept VALUES ('10','ACCOUNTING','NEW YORK');
 INSERT INTO dept VALUES ('20','RESEARCH','DALLAS');
 INSERT INTO dept VALUES ('30','SALES','CHICAGO');
 INSERT INTO dept VALUES ('40','OPERATIONS','BOSTON');
+
+select * from emp where ename != 'KING'
+ select * from emp where sal>=-2000;
+select * from emp where sal>=-3000 and sal<=4000;
+select * from emp where sal>=-3000 and sal<=4000;
+select * from emp where sal not between 3000 and 4000;
+
+select * from emp where sal between 3000 and 4000;
+select * from emp where comm is not null ;
+select * from emp where ename like 'A%';
+select * from emp where ename like '%A%' ;
+
+
+
+
