@@ -109,6 +109,9 @@ select empno , ename from emp where ename like '____';
 
 
 select ceil(12.01) from dual;
-     select round(12.49) from dual
+     select round(12.49) from dual 
+     select mod(34,6) ;
+
+      select rpad(ename, 15, "__") from emp;
      
 
