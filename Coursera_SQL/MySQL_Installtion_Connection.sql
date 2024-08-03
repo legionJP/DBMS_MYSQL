@@ -108,5 +108,7 @@ select empno , ename from emp where ename like '____';
 
 
 
-
+select ceil(12.01) from dual;
+     select round(12.49) from dual
+     
 
