@@ -82,6 +82,11 @@ INSERT INTO dept VALUES ('20','RESEARCH','DALLAS');
 INSERT INTO dept VALUES ('30','SALES','CHICAGO');
 INSERT INTO dept VALUES ('40','OPERATIONS','BOSTON');
 
+
+
+
+---   # Queries ----
+
 select * from emp where ename != 'KING'
  select * from emp where sal>=-2000;
 select * from emp where sal>=-3000 and sal<=4000;
