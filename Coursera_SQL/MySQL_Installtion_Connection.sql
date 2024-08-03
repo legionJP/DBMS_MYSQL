@@ -113,5 +113,8 @@ select ceil(12.01) from dual;
      select mod(34,6) ;
 
       select rpad(ename, 15, "__") from emp;
+      select hiredate , sysdate() from emp where substr(hiredate,6,7) < substr(sysdate() ,6,7);
+     select hiredate , sysdate() from emp where substr(hiredate,6,7) < substr(sysdate() ,4,3);
+     
      
 
