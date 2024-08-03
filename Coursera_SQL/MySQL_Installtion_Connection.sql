@@ -123,4 +123,25 @@ select ceil(12.01) from dual;
 |                   2 |
 +---------------------+
 
+select job, (case job when 'manager' then 'vp' when 'clerk' then 'exec' when 'salesman' then 's.officer' else job end) as new from emp;
++-----------+-----------+
+| job       | new       |
++-----------+-----------+
+| CLERK     | exec      |
+| SALESMAN  | s.officer |
+| SALESMAN  | s.officer |
+| MANAGER   | vp        |
+| SALESMAN  | s.officer |
+| MANAGER   | vp        |
+| MANAGER   | vp        |
+| ANALYST   | ANALYST   |
+| PRESIDENT | PRESIDENT |
+| SALESMAN  | s.officer |
+| CLERK     | exec      |
+| CLERK     | exec      |
+| ANALYST   | ANALYST   |
+| CLERK     | exec      |
++-----------+-----------+
+     
+
 
