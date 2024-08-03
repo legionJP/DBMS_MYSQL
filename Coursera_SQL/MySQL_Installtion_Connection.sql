@@ -116,5 +116,11 @@ select ceil(12.01) from dual;
       select hiredate , sysdate() from emp where substr(hiredate,6,7) < substr(sysdate() ,6,7);
      select hiredate , sysdate() from emp where substr(hiredate,6,7) < substr(sysdate() ,4,3);
      
-     
+     select instr('RAMANA','A') from dual;
++---------------------+
+| instr('RAMANA','A') |
++---------------------+
+|                   2 |
++---------------------+
+
 
