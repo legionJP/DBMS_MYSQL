@@ -142,6 +142,241 @@ select job, (case job when 'manager' then 'vp' when 'clerk' then 'exec' when 'sa
 | ANALYST   | ANALYST   |
 | CLERK     | exec      |
 +-----------+-----------+
+
+     ---Group By Clause;
+
+     select job, count(*) from emp group by job;
+     --mntion all the column in the group by if it is used in select column
+
+     select distinct(job) , count(ename) from emp group by job;
++-----------+--------------+
+| job       | count(ename) |
++-----------+--------------+
+| CLERK     |            4 |
+| SALESMAN  |            4 |
+| MANAGER   |            3 |
+| ANALYST   |            2 |
+| PRESIDENT |            1 |
++-----------+--------------+
+
+     
+
+select distinct(deptno) , count(ename) from emp group by deptno;
++--------+--------------+
+| deptno | count(ename) |
++--------+--------------+
+|     20 |            5 |
+|     30 |            6 |
+|     10 |            3 |
++--------+--------------+
+3 rows in set (0.00 sec)
+select sum(sal) as total , max(sal) as max_sal , min(sal) as min_sal , count(ename) , avg(sal) , deptno from emp  group by deptno;
++----------+---------+---------+--------------+-------------+--------+
+| total    | max_sal | min_sal | count(ename) | avg(sal)    | deptno |
++----------+---------+---------+--------------+-------------+--------+
+| 10875.00 | 3000.00 |  800.00 |            5 | 2175.000000 |     20 |
+|  9400.00 | 2850.00 |  950.00 |            6 | 1566.666667 |     30 |
+|  8750.00 | 5000.00 | 1300.00 |            3 | 2916.666667 |     10 |
++----------+---------+---------+--------------+-------------+--------+
+
+      select job, deptno, count(deptno)  from emp  group by deptno,job having count(*)>=2;
++----------+--------+---------------+
+| job      | deptno | count(deptno) |
++----------+--------+---------------+
+| CLERK    |     20 |             2 |
+| SALESMAN |     30 |             4 |
+| ANALYST  |     20 |             2 |
++----------+--------+---------------+
+
+ select emp.empno , emp.ename , emp.deptno , dept.dname from emp inner join dept on emp.deptno = dept.deptno;
++-------+--------+--------+------------+
+| empno | ename  | deptno | dname      |
++-------+--------+--------+------------+
+|  7369 | SMITH  |     20 | RESEARCH   |
+|  7499 | ALLEN  |     30 | SALES      |
+|  7521 | WARD   |     30 | SALES      |
+|  7566 | JONES  |     20 | RESEARCH   |
+|  7654 | MARTIN |     30 | SALES      |
+|  7698 | BLAKE  |     30 | SALES      |
+|  7782 | CLARK  |     10 | ACCOUNTING |
+|  7788 | SCOTT  |     20 | RESEARCH   |
+|  7839 | KING   |     10 | ACCOUNTING |
+|  7844 | TURNER |     30 | SALES      |
+|  7876 | ADAMS  |     20 | RESEARCH   |
+|  7900 | JAMES  |     30 | SALES      |
+|  7902 | FORD   |     20 | RESEARCH   |
+|  7934 | MILLER |     10 | ACCOUNTING |
++-------+--------+--------+------------+
+
+     select Orders.OrderID, Customers.CustomerName from Orders inner join Customers on Orders.CustomerID = Customers.CustomerID;
++---------+------------------------------------+
+| OrderID | CustomerName                       |
++---------+------------------------------------+
+|   10308 | Ana Trujillo Emparedados y helados |
+|   10365 | Antonio Moreno Taquería            |
+|   10355 | Around the Horn                    |
+|   10383 | Around the Horn                    |
+|   10278 | Berglunds snabbköp                 |
+|   10280 | Berglunds snabbköp                 |
+|   10384 | Berglunds snabbköp                 |
+|   10265 | Blondel père et fils               |
+_----------------------------------------------+
+     
+# joining the Three tables: 
+select Orders.OrderID , Customers.CustomerName , Shippers.ShipperName from ((Orders inner join Customers on Orders.CustomerID = Customers.CustomerID) inner join Shippers on Orders.ShipperID = Shippers.ShipperID);
++---------+------------------------------------+------------------+
+| OrderID | CustomerName                       | ShipperName      |
++---------+------------------------------------+------------------+
+|   10249 | Tradição Hipermercados             | Speedy Express   |
+|   10251 | Victuailles en stock               | Speedy Express   |
+|   10258 | Ernst Handel                       | Speedy Express   |
+|   10260 | Old World Delicatessen             | Speedy Express   |
+|   10265 | Blondel père et fils               | Speedy Express   |
+|   10267 | Frankenversand                     | Speedy Express   |
+|   10269 | White Clover Markets               | Speedy Express   |
+|   10270 | Wartian Herkku                     | Speedy Express   |
+|   10274 | Vins et alcools Chevalier          | Speedy Express   |
+|   10275 | Magazzini Alimentari Riuniti       | Speedy Express   |
+|   10280 | Berglunds snabbköp                 | Speedy Express   |
+|   10281 | Romero y tomillo                   | Speedy Express   |
+|   10282 | Romero y tomillo                   | Speedy Express   |
+|   10284 | Lehmanns Marktstand                | Speedy Express   |
++----------------------------------------------------------------+
+
+     -Left Join 
+select Customers.CustomerName, Orders.OrderID from Customers left join Orders on Customers.CustomerID= Orders.CustomerID order by Customers.CustomerName;
++--------------------------------------+---------+
+| CustomerName                         | OrderID |
++--------------------------------------+---------+
+| Alfreds Futterkiste                  |    NULL |
+| Ana Trujillo Emparedados y helados   |   10308 |
+| Antonio Moreno Taquería              |   10365 |
+| Around the Horn                      |   10355 |
+| Around the Horn                      |   10383 |
+| B''s Beverages                       |   10289 |
+| Berglunds snabbköp                   |   10278 |
+| Berglunds snabbköp                   |   10280 |
+| Berglunds snabbköp                   |   10384 |
+     
+select emp.ename , dept.dname, emp.deptno as emp_ID ,dept.deptno as Dept_ID from emp inner join dept on emp.deptno = dept.deptno;
++--------+------------+--------+---------+
+| ename  | dname      | emp_ID | Dept_ID |
++--------+------------+--------+---------+
+| SMITH  | RESEARCH   |     20 |      20 |
+| ALLEN  | SALES      |     30 |      30 |
+| WARD   | SALES      |     30 |      30 |
+| JONES  | RESEARCH   |     20 |      20 |
+| MARTIN | SALES      |     30 |      30 |
+| BLAKE  | SALES      |     30 |      30 |
+
+
+select emp.ename , dept.dname, emp.deptno as emp_ID ,dept.deptno as Dept_ID from dept left join emp on dept.deptno = emp.deptno;
++--------+------------+--------+---------+
+| ename  | dname      | emp_ID | Dept_ID |
++--------+------------+--------+---------+
+| MILLER | ACCOUNTING |     10 |      10 |
+| KING   | ACCOUNTING |     10 |      10 |
+| CLARK  | ACCOUNTING |     10 |      10 |
+| FORD   | RESEARCH   |     20 |      20 |
+| ADAMS  | RESEARCH   |     20 |      20 |
+| SCOTT  | RESEARCH   |     20 |      20 || JONES  | RESEARCH   |     20 |      20 |
+| SMITH  | RESEARCH   |     20 |      20 |
+| JAMES  | SALES      |     30 |      30 |
+| TURNER | SALES      |     30 |      30 |
+| BLAKE  | SALES      |     30 |      30 |
+| MARTIN | SALES      |     30 |      30 |
+| WARD   | SALES      |     30 |      30 |
+| ALLEN  | SALES      |     30 |      30 |
+| NULL   | OPERATIONS |   NULL |      40 |
++--------+------------+--------+---------+
+
+| JONES  | RESEARCH   |     20 |      20 |
+     
+-- Right join
+
+select emp.ename , dept.dname , emp.deptno  as emp_deptno from emp right join dept on emp.deptno = dept.deptno;
++--------+------------+------------+
+| ename  | dname      | emp_deptno |
++--------+------------+------------+
+| MILLER | ACCOUNTING |         10 |
+| KING   | ACCOUNTING |         10 |
+| CLARK  | ACCOUNTING |         10 |
+| FORD   | RESEARCH   |         20 |
+| ADAMS  | RESEARCH   |         20 |
+| SCOTT  | RESEARCH   |         20 |
+| JONES  | RESEARCH   |         20 |
+| SMITH  | RESEARCH   |         20 |
+| JAMES  | SALES      |         30 |
+| TURNER | SALES      |         30 |
+| BLAKE  | SALES      |         30 |
+| MARTIN | SALES      |         30 |
+| WARD   | SALES      |         30 |
+| ALLEN  | SALES      |         30 |
+| NULL   | OPERATIONS |       NULL |
++--------+------------+------------+
+15 rows in set (0.00 sec)
+
+     select Customers.contactName as customerName, Orders.OrderID from Customers left join Orders on Customers.CustomerID= Orders.CustomerID;
++----------------------+---------+
+| customerName         | OrderID |
++----------------------+---------+
+| Maria Anders         |    NULL |
+| Ana Trujillo         |   10308 |
+| Antonio Moreno       |   10365 |
+| Thomas Hardy         |   10355 |
+| Thomas Hardy         |   10383 |
+| Christina Berglund   |   10278 |
+| Christina Berglund   |   10280 |
+| Christina Berglund   |   10384 |
++--------------------------------+
+
+      select  Orders.OrderID , Employees.FirstName, Employees.EmployeeID from Orders right join Employees on Orders.EmployeeID = Employees.EmployeeID;
++---------+-----------+------------+
+| OrderID | FirstName | EmployeeID |
++---------+-----------+------------+
+|   10258 | Nancy     |          1 |
+|   10270 | Nancy     |          1 |
+|   10275 | Nancy     |          1 |
+|   10285 | Nancy     |          1 |
+|   10292 | Nancy     |          1 |
+|   10293 | Nancy     |          1 |
+|   10304 | Nancy     |          1 |
+|   10306 | Nancy     |          1 |
+|   10311 | Nancy     |          1 |
+|   10314 | Nancy     |          1 |
+|   10316 | Nancy     |          1 |
+|   10325 | Nancy     |          1 |
+|   10340 | Nancy     |          1 |
+|   10351 | Nancy     |          1 |
+|   10357 | Nancy     |          1 |
++----------------------------------+
+     
+      select Customers.ContactName as 'Customer_Name' , Orders.OrderID from Customers cross join Orders;
+
+
+     --Self Join
+select emp.empno, emp.ename, emp.mgr, mgr.ename, mgr.empno from emp as emp join emp as mgr on emp.mgr = mgr.empno;
++-------+--------+------+-------+-------+
+| empno | ename  | mgr  | ename | empno |
++-------+--------+------+-------+-------+
+|  7902 | FORD   | 7566 | JONES |  7566 |
+|  7788 | SCOTT  | 7566 | JONES |  7566 |
+|  7900 | JAMES  | 7698 | BLAKE |  7698 |
+|  7844 | TURNER | 7698 | BLAKE |  7698 |
+|  7654 | MARTIN | 7698 | BLAKE |  7698 |
+|  7521 | WARD   | 7698 | BLAKE |  7698 |
+|  7499 | ALLEN  | 7698 | BLAKE |  7698 |
+|  7934 | MILLER | 7782 | CLARK |  7782 |
+|  7876 | ADAMS  | 7788 | SCOTT |  7788 |
+|  7782 | CLARK  | 7839 | KING  |  7839 |
+|  7698 | BLAKE  | 7839 | KING  |  7839 |
+|  7566 | JONES  | 7839 | KING  |  7839 |
+|  7369 | SMITH  | 7902 | FORD  |  7902 |
++-------+--------+------+-------+-------+
+
+     select e.empno, e.ename , e.mgr, m.empno , m.mgr, d.empno, d.ename  from emp as e join emp as m on e.mgr
+= e.empno join emp as d on m.mgr = d.empno;
+
      
 select  job sum(sal), sum(comm), count(empno), count(job) from emp group by job;
 
