@@ -351,4 +351,30 @@ select emp.ename , dept.dname , emp.deptno  as emp_deptno from emp right join de
 |   10357 | Nancy     |          1 |
 +----------------------------------+
      
-     
+      select Customers.ContactName as 'Customer_Name' , Orders.OrderID from Customers cross join Orders;
+
+
+     --Self Join
+select emp.empno, emp.ename, emp.mgr, mgr.ename, mgr.empno from emp as emp join emp as mgr on emp.mgr = mgr.empno;
++-------+--------+------+-------+-------+
+| empno | ename  | mgr  | ename | empno |
++-------+--------+------+-------+-------+
+|  7902 | FORD   | 7566 | JONES |  7566 |
+|  7788 | SCOTT  | 7566 | JONES |  7566 |
+|  7900 | JAMES  | 7698 | BLAKE |  7698 |
+|  7844 | TURNER | 7698 | BLAKE |  7698 |
+|  7654 | MARTIN | 7698 | BLAKE |  7698 |
+|  7521 | WARD   | 7698 | BLAKE |  7698 |
+|  7499 | ALLEN  | 7698 | BLAKE |  7698 |
+|  7934 | MILLER | 7782 | CLARK |  7782 |
+|  7876 | ADAMS  | 7788 | SCOTT |  7788 |
+|  7782 | CLARK  | 7839 | KING  |  7839 |
+|  7698 | BLAKE  | 7839 | KING  |  7839 |
+|  7566 | JONES  | 7839 | KING  |  7839 |
+|  7369 | SMITH  | 7902 | FORD  |  7902 |
++-------+--------+------+-------+-------+
+
+     select e.empno, e.ename , e.mgr, m.empno , m.mgr, d.empno, d.ename  from emp as e join emp as m on e.mgr
+= e.empno join emp as d on m.mgr = d.empno;
+
+
