@@ -270,6 +270,27 @@ select emp.ename , dept.dname, emp.deptno as emp_ID ,dept.deptno as Dept_ID from
 | BLAKE  | SALES      |     30 |      30 |
 
 
+select emp.ename , dept.dname, emp.deptno as emp_ID ,dept.deptno as Dept_ID from dept left join emp on dept.deptno = emp.deptno;
++--------+------------+--------+---------+
+| ename  | dname      | emp_ID | Dept_ID |
++--------+------------+--------+---------+
+| MILLER | ACCOUNTING |     10 |      10 |
+| KING   | ACCOUNTING |     10 |      10 |
+| CLARK  | ACCOUNTING |     10 |      10 |
+| FORD   | RESEARCH   |     20 |      20 |
+| ADAMS  | RESEARCH   |     20 |      20 |
+| SCOTT  | RESEARCH   |     20 |      20 || JONES  | RESEARCH   |     20 |      20 |
+| SMITH  | RESEARCH   |     20 |      20 |
+| JAMES  | SALES      |     30 |      30 |
+| TURNER | SALES      |     30 |      30 |
+| BLAKE  | SALES      |     30 |      30 |
+| MARTIN | SALES      |     30 |      30 |
+| WARD   | SALES      |     30 |      30 |
+| ALLEN  | SALES      |     30 |      30 |
+| NULL   | OPERATIONS |   NULL |      40 |
++--------+------------+--------+---------+
+
+| JONES  | RESEARCH   |     20 |      20 |
      
 
      
