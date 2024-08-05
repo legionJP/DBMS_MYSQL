@@ -292,5 +292,28 @@ select emp.ename , dept.dname, emp.deptno as emp_ID ,dept.deptno as Dept_ID from
 
 | JONES  | RESEARCH   |     20 |      20 |
      
+-- Right join
 
+select emp.ename , dept.dname , emp.deptno  as emp_deptno from emp right join dept on emp.deptno = dept.deptno;
++--------+------------+------------+
+| ename  | dname      | emp_deptno |
++--------+------------+------------+
+| MILLER | ACCOUNTING |         10 |
+| KING   | ACCOUNTING |         10 |
+| CLARK  | ACCOUNTING |         10 |
+| FORD   | RESEARCH   |         20 |
+| ADAMS  | RESEARCH   |         20 |
+| SCOTT  | RESEARCH   |         20 |
+| JONES  | RESEARCH   |         20 |
+| SMITH  | RESEARCH   |         20 |
+| JAMES  | SALES      |         30 |
+| TURNER | SALES      |         30 |
+| BLAKE  | SALES      |         30 |
+| MARTIN | SALES      |         30 |
+| WARD   | SALES      |         30 |
+| ALLEN  | SALES      |         30 |
+| NULL   | OPERATIONS |       NULL |
++--------+------------+------------+
+15 rows in set (0.00 sec)
+     
      
