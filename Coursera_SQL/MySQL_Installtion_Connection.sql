@@ -208,3 +208,17 @@ select sum(sal) as total , max(sal) as max_sal , min(sal) as min_sal , count(ena
 |  7934 | MILLER |     10 | ACCOUNTING |
 +-------+--------+--------+------------+
 
+     select Orders.OrderID, Customers.CustomerName from Orders inner join Customers on Orders.CustomerID = Customers.CustomerID;
++---------+------------------------------------+
+| OrderID | CustomerName                       |
++---------+------------------------------------+
+|   10308 | Ana Trujillo Emparedados y helados |
+|   10365 | Antonio Moreno Taquería            |
+|   10355 | Around the Horn                    |
+|   10383 | Around the Horn                    |
+|   10278 | Berglunds snabbköp                 |
+|   10280 | Berglunds snabbköp                 |
+|   10384 | Berglunds snabbköp                 |
+|   10265 | Blondel père et fils               |
+_----------------------------------------------+
+     
