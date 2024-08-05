@@ -380,3 +380,23 @@ select emp.empno, emp.ename, emp.mgr, mgr.ename, mgr.empno from emp as emp join 
      
 select  job sum(sal), sum(comm), count(empno), count(job) from emp group by job;
 
+     
+     select e.empno, e.ename , e.mgr, m.empno , m.mgr, d.empno, d.ename  from emp as e join emp as m on e.mgr
+= e.empno join emp as d on m.mgr = d.empno;
+
+
+select deptno from emp union select deptno from dept;
++--------+
+| deptno |
++--------+
+|     20 |
+|     30 |
+|     10 |
+|     40 |
++--------+
+select emp.ename , sal from emp where sal=( select max(sal) from emp);
++-------+---------+
+| ename | sal     |
++-------+---------+
+| KING  | 5000.00 |
++-------+---------+
