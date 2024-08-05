@@ -257,6 +257,19 @@ select Customers.CustomerName, Orders.OrderID from Customers left join Orders on
 | Berglunds snabbköp                   |   10278 |
 | Berglunds snabbköp                   |   10280 |
 | Berglunds snabbköp                   |   10384 |
+     
+select emp.ename , dept.dname, emp.deptno as emp_ID ,dept.deptno as Dept_ID from emp inner join dept on emp.deptno = dept.deptno;
++--------+------------+--------+---------+
+| ename  | dname      | emp_ID | Dept_ID |
++--------+------------+--------+---------+
+| SMITH  | RESEARCH   |     20 |      20 |
+| ALLEN  | SALES      |     30 |      30 |
+| WARD   | SALES      |     30 |      30 |
+| JONES  | RESEARCH   |     20 |      20 |
+| MARTIN | SALES      |     30 |      30 |
+| BLAKE  | SALES      |     30 |      30 |
 
+
+     
 
      
