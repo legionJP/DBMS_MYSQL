@@ -241,3 +241,22 @@ select Orders.OrderID , Customers.CustomerName , Shippers.ShipperName from ((Ord
 |   10281 | Romero y tomillo                   | Speedy Express   |
 |   10282 | Romero y tomillo                   | Speedy Express   |
 |   10284 | Lehmanns Marktstand                | Speedy Express   |
++----------------------------------------------------------------+
+
+     -Left Join 
+select Customers.CustomerName, Orders.OrderID from Customers left join Orders on Customers.CustomerID= Orders.CustomerID order by Customers.CustomerName;
++--------------------------------------+---------+
+| CustomerName                         | OrderID |
++--------------------------------------+---------+
+| Alfreds Futterkiste                  |    NULL |
+| Ana Trujillo Emparedados y helados   |   10308 |
+| Antonio Moreno Taquería              |   10365 |
+| Around the Horn                      |   10355 |
+| Around the Horn                      |   10383 |
+| B''s Beverages                       |   10289 |
+| Berglunds snabbköp                   |   10278 |
+| Berglunds snabbköp                   |   10280 |
+| Berglunds snabbköp                   |   10384 |
+
+
+     
