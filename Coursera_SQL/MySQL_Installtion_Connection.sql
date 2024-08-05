@@ -440,3 +440,21 @@ select * from emp where (job , sal) in(select job, max(sal) from emp group by jo
 |  7934 | MILLER | CLERK     | 7782 | 1982-01-23 | 1300.00 |   NULL |     10 |
 +-------+--------+-----------+------+------------+---------+--------+--------+
 
+     --corelated query 
+     select empno, ename,deptno,sal from emp x where sal < (select max(sal) from emp where deptno = x.deptno);
+
++-------+--------+--------+---------+
+| empno | ename  | deptno | sal     |
++-------+--------+--------+---------+
+|  7369 | SMITH  |     20 |  800.00 |
+|  7499 | ALLEN  |     30 | 1600.00 |
+|  7521 | WARD   |     30 | 1250.00 |
+|  7566 | JONES  |     20 | 2975.00 |
+|  7654 | MARTIN |     30 | 1250.00 |
+|  7782 | CLARK  |     10 | 2450.00 |
+|  7844 | TURNER |     30 | 1500.00 |
+|  7876 | ADAMS  |     20 | 1100.00 |
+|  7900 | JAMES  |     30 |  950.00 |
+|  7934 | MILLER |     10 | 1300.00 |
++-------+--------+--------+---------+
+
