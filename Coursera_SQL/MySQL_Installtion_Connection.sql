@@ -179,5 +179,13 @@ select sum(sal) as total , max(sal) as max_sal , min(sal) as min_sal , count(ena
 |  8750.00 | 5000.00 | 1300.00 |            3 | 2916.666667 |     10 |
 +----------+---------+---------+--------------+-------------+--------+
 
-     
+      select job, deptno, count(deptno)  from emp  group by deptno,job having count(*)>=2;
++----------+--------+---------------+
+| job      | deptno | count(deptno) |
++----------+--------+---------------+
+| CLERK    |     20 |             2 |
+| SALESMAN |     30 |             4 |
+| ANALYST  |     20 |             2 |
++----------+--------+---------------+
+
 
