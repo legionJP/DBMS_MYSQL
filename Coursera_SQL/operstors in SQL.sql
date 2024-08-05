@@ -81,3 +81,5 @@ SELECT * from employee where salary<12000;
 
 SELECT * from employee where salary<>24000;
 
+select LPAD(ename,15) from emp;
+
