@@ -143,5 +143,5 @@ select job, (case job when 'manager' then 'vp' when 'clerk' then 'exec' when 'sa
 | CLERK     | exec      |
 +-----------+-----------+
      
-
+select  job sum(sal), sum(comm), count(empno), count(job) from emp group by job;
 
