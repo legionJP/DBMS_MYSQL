@@ -146,6 +146,7 @@ select job, (case job when 'manager' then 'vp' when 'clerk' then 'exec' when 'sa
      ---Group By Clause;
 
      select job, count(*) from emp group by job;
+     --mntion all the column in the group by if it is used in select column
 
      select distinct(job) , count(ename) from emp group by job;
 +-----------+--------------+
