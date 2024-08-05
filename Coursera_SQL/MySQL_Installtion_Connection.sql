@@ -315,5 +315,40 @@ select emp.ename , dept.dname , emp.deptno  as emp_deptno from emp right join de
 | NULL   | OPERATIONS |       NULL |
 +--------+------------+------------+
 15 rows in set (0.00 sec)
+
+     select Customers.contactName as customerName, Orders.OrderID from Customers left join Orders on Customers.CustomerID= Orders.CustomerID;
++----------------------+---------+
+| customerName         | OrderID |
++----------------------+---------+
+| Maria Anders         |    NULL |
+| Ana Trujillo         |   10308 |
+| Antonio Moreno       |   10365 |
+| Thomas Hardy         |   10355 |
+| Thomas Hardy         |   10383 |
+| Christina Berglund   |   10278 |
+| Christina Berglund   |   10280 |
+| Christina Berglund   |   10384 |
++--------------------------------+
+
+      select  Orders.OrderID , Employees.FirstName, Employees.EmployeeID from Orders right join Employees on Orders.EmployeeID = Employees.EmployeeID;
++---------+-----------+------------+
+| OrderID | FirstName | EmployeeID |
++---------+-----------+------------+
+|   10258 | Nancy     |          1 |
+|   10270 | Nancy     |          1 |
+|   10275 | Nancy     |          1 |
+|   10285 | Nancy     |          1 |
+|   10292 | Nancy     |          1 |
+|   10293 | Nancy     |          1 |
+|   10304 | Nancy     |          1 |
+|   10306 | Nancy     |          1 |
+|   10311 | Nancy     |          1 |
+|   10314 | Nancy     |          1 |
+|   10316 | Nancy     |          1 |
+|   10325 | Nancy     |          1 |
+|   10340 | Nancy     |          1 |
+|   10351 | Nancy     |          1 |
+|   10357 | Nancy     |          1 |
++----------------------------------+
      
      
