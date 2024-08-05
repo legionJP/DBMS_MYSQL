@@ -146,6 +146,37 @@ select job, (case job when 'manager' then 'vp' when 'clerk' then 'exec' when 'sa
      ---Group By Clause;
 
      select job, count(*) from emp group by job;
+
+     select distinct(job) , count(ename) from emp group by job;
++-----------+--------------+
+| job       | count(ename) |
++-----------+--------------+
+| CLERK     |            4 |
+| SALESMAN  |            4 |
+| MANAGER   |            3 |
+| ANALYST   |            2 |
+| PRESIDENT |            1 |
++-----------+--------------+
+
      
 
+select distinct(deptno) , count(ename) from emp group by deptno;
++--------+--------------+
+| deptno | count(ename) |
++--------+--------------+
+|     20 |            5 |
+|     30 |            6 |
+|     10 |            3 |
++--------+--------------+
+3 rows in set (0.00 sec)
+select sum(sal) as total , max(sal) as max_sal , min(sal) as min_sal , count(ename) , avg(sal) , deptno from emp  group by deptno;
++----------+---------+---------+--------------+-------------+--------+
+| total    | max_sal | min_sal | count(ename) | avg(sal)    | deptno |
++----------+---------+---------+--------------+-------------+--------+
+| 10875.00 | 3000.00 |  800.00 |            5 | 2175.000000 |     20 |
+|  9400.00 | 2850.00 |  950.00 |            6 | 1566.666667 |     30 |
+|  8750.00 | 5000.00 | 1300.00 |            3 | 2916.666667 |     10 |
++----------+---------+---------+--------------+-------------+--------+
+
+     
 
