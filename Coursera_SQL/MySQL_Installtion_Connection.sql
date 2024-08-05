@@ -222,3 +222,22 @@ select sum(sal) as total , max(sal) as max_sal , min(sal) as min_sal , count(ena
 |   10265 | Blondel père et fils               |
 _----------------------------------------------+
      
+# joining the Three tables: 
+select Orders.OrderID , Customers.CustomerName , Shippers.ShipperName from ((Orders inner join Customers on Orders.CustomerID = Customers.CustomerID) inner join Shippers on Orders.ShipperID = Shippers.ShipperID);
++---------+------------------------------------+------------------+
+| OrderID | CustomerName                       | ShipperName      |
++---------+------------------------------------+------------------+
+|   10249 | Tradição Hipermercados             | Speedy Express   |
+|   10251 | Victuailles en stock               | Speedy Express   |
+|   10258 | Ernst Handel                       | Speedy Express   |
+|   10260 | Old World Delicatessen             | Speedy Express   |
+|   10265 | Blondel père et fils               | Speedy Express   |
+|   10267 | Frankenversand                     | Speedy Express   |
+|   10269 | White Clover Markets               | Speedy Express   |
+|   10270 | Wartian Herkku                     | Speedy Express   |
+|   10274 | Vins et alcools Chevalier          | Speedy Express   |
+|   10275 | Magazzini Alimentari Riuniti       | Speedy Express   |
+|   10280 | Berglunds snabbköp                 | Speedy Express   |
+|   10281 | Romero y tomillo                   | Speedy Express   |
+|   10282 | Romero y tomillo                   | Speedy Express   |
+|   10284 | Lehmanns Marktstand                | Speedy Express   |
