@@ -458,3 +458,18 @@ select * from emp where (job , sal) in(select job, max(sal) from emp group by jo
 |  7934 | MILLER |     10 | 1300.00 |
 +-------+--------+--------+---------+
 
+     --find the nth highest salary
+
+     select empno, ename, sal from emp x where @n = (select count(distinct sal) from emp where sal>= x.sal);
+Empty set (0.01 sec)
+     
+     --3rd highest sal.
+      select empno, ename, sal from emp x where 3 = (select count(distinct sal) from emp where sal>= x.sal);
++-------+-------+---------+
+| empno | ename | sal     |
++-------+-------+---------+
+|  7566 | JONES | 2975.00 |
++-------+-------+---------+
+
+     
+     
