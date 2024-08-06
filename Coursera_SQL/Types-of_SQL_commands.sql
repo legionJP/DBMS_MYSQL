@@ -83,3 +83,14 @@ alter table Persons modify personID int not null , FirstName varchar(100) not nu
 ---________________________________________________________________________________________--
 
 DROP table shippers;
+
+
+
+
+# naming of the a Foreign Key Comstraint
+
+
+
+
+alter table Orders dro                                  
+ foreign key FK_personOrder

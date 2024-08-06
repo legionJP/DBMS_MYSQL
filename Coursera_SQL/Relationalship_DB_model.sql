@@ -94,3 +94,29 @@ one to one realtionship.
 To create this relationship in the actual database you need to modify the vehicle table structure to make the owner ID a foreign key.
 
 ALTER TABLE vehicle ADD FOREIGN KEY (ownerID) REFERENCES owner (ownerID);
+*/
+
+# Adding a Named Foreign Key Constraint to an Existing Table
+
+--ALTER TABLE Orders
+ADD CONSTRAINT FK_PersonOrder FOREIGN KEY (PersonID) REFERENCES Persons (PersonID);
+
+#Dropping a Named Foreign Key Constraint
+
+--ALTER TABLE Orders
+DROP CONSTRAINT FK_PersonOrder;
+
+# Advantages to naming your constraints:
+
+1.
+Clarity in Error Messages:
+ When a constraint is violated, the error message will include the constraint name. 
+If the name is clear and descriptive, it makes it easier to understand the issue. 
+For example, an error message mentioning FK_PersonOrder is more informative
+ than one mentioning a system-generated name like FK__Orders__PersonID__123456781.
+
+2. Ease of Maintenance:
+ Named constraints make it easier to modify or drop them later. If you need to change or remove a constraint, having a specific name allows you to reference it directly. For example:
+SQL
+
+ALTER TABLE Orders DROP CONSTRAINT FK_PersonOrder;

@@ -18,11 +18,12 @@ ex. like inserting a data in table where id is primary key so inserting the data
 firsty insert the students data of id fields . 
 
 Update anomaly: updating a record in a table column requires further updates in other  multiple columns. 
-ex. for updating the department director which is common in a two row we alo have to update the other columns reocrds . 
+ex. for updating the department director which is common in a two row we also have to update the other columns reocrds . 
 
 Deletion anamolay: 
 deletion of one records leads to the deletion of several more required data sets. or 
  removing the one instance of a reocrd of causes a deletion of the other records. 
+
 ***********************************************************************************************
 DATABASE Normalization
 **************************
