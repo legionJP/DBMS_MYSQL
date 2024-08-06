@@ -55,3 +55,31 @@ check         -- checks that the values in the given column satisfies a specific
 default   -- sets a default value for a column and satisfies a specific condition
 create index -- used to create and retirieve data from the database very quickly
 
+---________________________________________________________________________________________--
+                                        NOT NULL 
+---________________________________________________________________________________________--
+
+create tbale Customer(personID int Not Null , Firrstname varchar Not Null , AGE int);
+
+--________________________________________________________________________________________--
+                                      ALTER TABLE
+---________________________________________________________________________________________--
+
+--add
+alter table table_name ( add column datatype)
+
+--drop
+alter table persons drop column DatefoBirth;
+
+--modify
+ALTER TABLE MODIFY COLUMN_NAME DATATYPE
+--------------------------------------------------------------------------------------------------
+--Query
+alter table Persons modify personID int not null , FirstName varchar(100) not null , LastName varchar(100) not null;
+
+
+--________________________________________________________________________________________--
+                                      DROP TABLE
+---________________________________________________________________________________________--
+
+DROP table shippers;
