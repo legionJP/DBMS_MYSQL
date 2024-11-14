@@ -1,4 +1,4 @@
-### Table:
+ ### Table:
    ```
   A table is known as a entitty in a conceptual or logical way, made up of rows and columun and these have relations.
   So, A table is an organized collection of data stored in the form of rows and columns.
@@ -25,23 +25,21 @@
 ```
 ### Data Types in the SQL:-
 
---Numeric data types: such as INT, TINYINT, BIGINT, FLOAT, REAL. 
+$\color{Green}{Numeric data types}$ : such as INT, TINYINT, BIGINT, FLOAT, REAL. 
 
---Date and time data: types such as DATE, TIME, DATETIME. 
+$\color{Green}{Date and time data}$: types such as DATE, TIME, DATETIME. 
 
---Character and string data: types such as CHAR, VARCHAR. 
+$\color{Green}{Character and string data:}$ types such as CHAR, VARCHAR. 
 
---Binary data types: such as BINARY, VARBINARY. 
+$\color{Green}{Binary data types:}$  such as BINARY, VARBINARY. 
 
---Miscellaneous data types such as: 
+$\color{Green}{Miscellaneous data types such as}$: 
+- Character Large Object (CLOB) for storing a large block of text in some form of text encoding.   
+- Binary Large Object (BLOB) for storing a collection of binary data such as images. 
 
---Character Large Object (CLOB) for storing a large block of text in some form of text encoding.   
-
---Binary Large Object (BLOB) for storing a collection of binary data such as images. 
-
-
-/*Note:  In relational database terminology a table is also known as a relation.
- A table row or a record is also known as a tuple. For example, the student relation above has six tuples.
+> [!NOTE] 
+> In relational database terminology a table is also known as a relation.
+> A table row or a record is also known as a tuple. For example, the student relation above has six > tuples.
 
 Each table or relation in a database has its own schema. Schema simply means the structure. The structure includes:
 
