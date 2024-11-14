@@ -1,19 +1,29 @@
- --Table:  A table is known as a entitty in a conceptual or logical way, made up of rows and columun and these have relations,\
-   -- Object oriented DB or entitty : entity is object that is attributes that are like columns or fields : 
-   --each columun: hold the different types of data like numeric and string and tables
+### Table:
+   ```
+  A table is known as a entitty in a conceptual or logical way, made up of rows and columun and these have relations.
+  So, A table is an organized collection of data stored in the form of rows and columns.
+  Columns can be categorized as vertical and rows as horizontal.
 
-   --Rows: 
-   --cloumns and fields forms a rows in a relational database technology .  Rows also reffered as the tupels.
-  
+ The columns in a table are called fields while the rows can be referred to as records.
+   ```
+#### Object oriented DB or entitty : 
+   ```Entity is object that is attributes that are like columns or fields : 
+    each columun: hold the different types of data like numeric and string data
+   ```
+#### Rows: 
+  ```
+  columns and fields forms a rows in a relational database technology .  Rows also reffered as the tupels.
+  ```
   -->
- --  Data types : in many DB as  they supports are the : String , Numeric, and the Ddate and time 
+## Data types : 
+--- In many DB as  they supports data types are the : String , Numeric, and the Ddate and time 
 
---Domain:
+#### Domain:
+```
 --> A domain is a set of legal values that are assign to a attribute basically on the basis of the data type domain
 -- like numeric data should be placed in the numeric domain and characters or string in the string domain  
-
-
--- Data Types in the SQL:-
+```
+### Data Types in the SQL:-
 
 --Numeric data types: such as INT, TINYINT, BIGINT, FLOAT, REAL. 
 
@@ -62,7 +72,23 @@ and data type.  */
 --Alternate Key:  It is the key that is not selected to be a primary key, it is a columun that contains a unique value in each field.
 --Secondary Key: 
 
-/* Integrity constraints
+### Constraints in SQL
+```
+ Constraints are used to specify the rules concerning data in the table. It can be
+ applied for single or multiple fields in an SQL table during the creation of the table or
+ after creating using the ALTER TABLE command. 
+ ```
+##### The constraints are:
+-- NOT NULL - Restricts NULL value from being inserted into a column.
+-- CHECK - Verifies that all values in a field satisfy a condition.
+-- DEFAULT - Automatically assigns a default value if no value has been specified
+ for the field.
+-- UNIQUE - Ensures unique values to be inserted into the field.
+-- INDEX - Indexes a field providing faster retrieval of records.
+-- PRIMARY KEY - Uniquely identifies each record in a table.
+-- FOREIGN KEY - Ensures referential integrity for a record in another table
+
+### Integrity constraints
 
 There are three main integrity constraints:
 
