@@ -79,8 +79,8 @@ and data type.  */
  after creating using the ALTER TABLE command. 
  ```
 ##### The constraints are:
--- NOT NULL - Restricts NULL value from being inserted into a column.
--- CHECK - Verifies that all values in a field satisfy a condition.
+1.  - 'NOT NULL' - Restricts NULL value from being inserted into a column.
+2. - CHECK - Verifies that all values in a field satisfy a condition.
 -- DEFAULT - Automatically assigns a default value if no value has been specified
  for the field.
 -- UNIQUE - Ensures unique values to be inserted into the field.
@@ -151,3 +151,26 @@ Composite Key attributte:
 It is a key that is composite of the two or more attribute to form a a unique value in a each new row , 
 it is considered when a signle attribute key can't be identified.
 */
+
+###### Guides-----
+
+1. $\color{Green}{useradd}$
+$\color{Blue}{Command-Description}$
+
+
+> [!NOTE]
+> Useful information that users should know, even when skimming content.
+ 
+
+> [!TIP]
+> Helpful tips will share soon
+
+> [!IMPORTANT]
+> will share/write soon
+
+
+> [!WARNING]
+>  will share/write when applicable
+
+> [!CAUTION]
+> will share/write when applicable
