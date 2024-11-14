@@ -24,18 +24,19 @@
 -- like numeric data should be placed in the numeric domain and characters or string in the string domain  
 ```
 ### Data Types in the SQL:-
-
+```diff
 $\color{Green}{Numeric }$ : data types such as INT, TINYINT, BIGINT, FLOAT, REAL. 
 
-$\color{Green}{Date and time }$ :data types such as DATE, TIME, DATETIME. 
+$\color{Green}{Date-time }$ :data types such as DATE, TIME, DATETIME. 
 
 $\color{Green}{Character-string}$ :data types such as CHAR, VARCHAR. 
 
 $\color{Green}{Binary }$ :such as BINARY, VARBINARY. 
 
-$\color{Green}{Miscellaneous data types such as}$: 
+$\color{Green}{Miscellaneous}$: Data types such as
 - Character Large Object (CLOB) for storing a large block of text in some form of text encoding.   
 - Binary Large Object (BLOB) for storing a collection of binary data such as images. 
+```
 
 > [!NOTE] 
 > In relational database terminology a table is also known as a relation.
