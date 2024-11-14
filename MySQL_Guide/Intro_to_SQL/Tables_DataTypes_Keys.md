@@ -108,7 +108,7 @@ The key constraint specifies that there should be a column, or columns, in a tab
 like primary key.  
 This key attribute or primary key should never be NULL or the same for two different rows of data. 
 
-Domain constraints:-
+@@ Domain constraints:- @@
 Domain constraints refer to the rules defined for the values that can be stored for a certain column. For instance, you cannot store the 
 home address of a student in the first name column.
  Similarly, a contact number cannot exceed ten digits.
