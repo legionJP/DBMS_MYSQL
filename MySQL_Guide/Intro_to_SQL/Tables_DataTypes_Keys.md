@@ -1,4 +1,4 @@
- ### Table:
+ ## Table:
   ```
   A table is known as a entitty in a conceptual or logical way, made up of rows and columun and these have relations.
   So, A table is an organized collection of data stored in the form of rows and columns.
@@ -10,6 +10,7 @@
 >A record consists of a collection of data for each entity. It’s also known as a row in the table.
 
 #### Object oriented DB or entitty : 
+
    ```Entity is object that is attributes that are like columns or fields : 
     each columun: hold the different types of data like numeric and string data
    ```
@@ -117,17 +118,17 @@ Automatically assigns a default value if no value has been specified for the fie
  Indexes a field providing faster retrieval of records.
  They improve the performance of data retrieval queries at the cost of additional storage and maintenance. Indexes are used to quickly locate data without having to search every row in a database table whenever a database table is accessed.
 Types of Indexes:
-1.	Unique Index: Ensures that the index key column does not have duplicate values.
-2.	Clustered Index: Alters the physical order of the table and search keys to match the index, making retrieval of data more efficient.
-3.	Non-Clustered Index: Does not alter the physical order of the table and maintains a logical order of the index.
+1.Unique Index: Ensures that the index key column does not have duplicate values.
+2.Clustered Index: Alters the physical order of the table and search keys to match the index, making retrieval of data more efficient.
+3.Non-Clustered Index: Does not alter the physical order of the table and maintains a logical order of the index.
 How Indexes Work:
 •	When an index is created on a column, the database stores a sorted copy of the indexed columns and pointers to the rows of the actual table.
 •	The index allows the database to find data much faster compared to scanning the entire table.
-Creating an Index:
-sql
++ Creating an Index:
+-sql
 CREATE INDEX idx_customer_name ON customers (customer_name);
-Dropping an Index:
-sql
++ Dropping an Index:
+- sql
 DROP INDEX idx_customer_name ON customers;
 
 ```
@@ -174,13 +175,13 @@ Similarly, a contact number cannot exceed ten digits.
 When a table is related to another table via a foreign key column, then the referenced column value must exist in the other table.
 ```
 
-#Logical DATABASE Structure
+## Logical DATABASE Structure
 
 The logical structure of a database is represented using a diagram known as the Entity Relationship Diagram (ERD).
  It is a visual representation of how the database will be implemented into tables during physical database design, 
 using a Database Management System (DBMS),like MySQL or Oracle
 
- three ways in which entity instances can be related to each other:
+Three ways in which entity instances can be related to each other:
 
 One-to-one relationships 
 
