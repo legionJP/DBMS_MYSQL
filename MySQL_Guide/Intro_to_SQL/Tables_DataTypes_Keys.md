@@ -206,6 +206,44 @@ It is a key that is composite of the two or more attribute to form a a unique va
 it is considered when a signle attribute key can't be identified.
 */
 
+> [!IMPORTANT]
+> Cursors in SQL:
+Cursors are database objects used to retrieve, manipulate, and navigate through result sets one row at a time. They are necessary when you need to fetch and process individual rows returned by a query. They provide a mechanism for traversing the rows of a result set, and they support operations on the data fetched from the database.
+Types of Cursors:
+1.	Implicit Cursors: Automatically created by the database for single row queries.
+2.	Explicit Cursors: Defined and managed by the programmer for queries that return more than one row.
+Working with Cursors:
+1.	Declare: Define the cursor with a SELECT statement.
+2.	Open: Execute the query and establish the result set.
+3.	Fetch: Retrieve one row of the result set.
+4.	Close: Release the cursor.
+Cursor Example:
+sql
+-- Declare the cursor
+DECLARE cursor_name CURSOR FOR
+SELECT customer_name FROM customers;
+
+-- Open the cursor
+OPEN cursor_name;
+
+-- Fetch the next row from the cursor into a variable
+FETCH NEXT FROM cursor_name INTO @customer_name;
+
+-- Process the fetched data (e.g., print the customer name)
+PRINT @customer_name;
+
+-- Close the cursor
+CLOSE cursor_name;
+
+-- Deallocate the cursor
+DEALLOCATE cursor_name;
+Key Differences:
+•	Index: Optimizes read operations by quickly locating data without scanning the entire table.
+•	Cursor: Provides row-by-row processing of result sets and is used when complex row-wise operations are necessary.
+Indexes and cursors are powerful tools in SQL for optimizing database operations. Indexes enhance query performance by allowing quick data retrieval, while cursors enable detailed row-by-row processing of query results. Together, they help in managing complex data manipulations efficiently. 
+
+
+
 ###### Guides-----
 
 1. $\color{Green}{useradd}$
