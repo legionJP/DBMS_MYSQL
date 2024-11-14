@@ -1,10 +1,14 @@
  ### Table:
-   ```
+  ```
   A table is known as a entitty in a conceptual or logical way, made up of rows and columun and these have relations.
   So, A table is an organized collection of data stored in the form of rows and columns.
   Columns can be categorized as vertical and rows as horizontal.
-
  The columns in a table are called fields while the rows can be referred to as records.
+[!NOTE]
+>Records
+>A record consists of a collection of data for each entity. It’s also known as a row in the table.
+
+> 
    ```
 #### Object oriented DB or entitty : 
    ```Entity is object that is attributes that are like columns or fields : 
@@ -72,10 +76,10 @@ The primary key of this table is EMP_ID and DEPT_ID.these to can make records to
 This is also known as a composite primary key.
 ```
 ```diff
-- Foregin key:
+- Foreign key:
 ```  
 ```
-- it REFERENCES as a UNIQUE key in another table Tables are linked with one another through a key column (the primary key) of one table that’s also present in the related table as a foreign key.
+It REFERENCES as a UNIQUE key in another table Tables are linked with one another through a key column (the primary key) of one table that’s also present in the related table as a foreign key.
 ```
 
 ```diff
@@ -116,27 +120,26 @@ There are three main integrity constraints:
 ```
 
 $\color{Blue}{key constraints:- }$
-
-The key constraint specifies that there should be a column, or columns, in a table that can be used to fetch data for any row.
-like primary key.  
+```
+The key constraint specifies that there should be a column, 
+or columns, in a table that can be used to fetch data for any row like primary key.  
 This key attribute or primary key should never be NULL or the same for two different rows of data. 
+```
+
 ```diff
-@@ Domain constraints:- @@
++ Domain constraints:-
+```
 ```
 Domain constraints refer to the rules defined for the values that can be stored for a certain column. For instance, you cannot store the 
 home address of a student in the first name column.
- Similarly, a contact number cannot exceed ten digits.
-
-referential integrity constraints:-
-
+Similarly, a contact number cannot exceed ten digits.
+```
+```diff
++ Referential integrity constraints:-
+```
+```
 When a table is related to another table via a foreign key column, then the referenced column value must exist in the other table.
-
-*/
-
---Records
---A record consists of a collection of data for each entity. It’s also known as a row in the table.
-
-/*
+```
 
 #Logical DATABASE Structure
 
