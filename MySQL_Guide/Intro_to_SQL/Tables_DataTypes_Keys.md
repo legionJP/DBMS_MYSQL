@@ -3,13 +3,12 @@
   A table is known as a entitty in a conceptual or logical way, made up of rows and columun and these have relations.
   So, A table is an organized collection of data stored in the form of rows and columns.
   Columns can be categorized as vertical and rows as horizontal.
- The columns in a table are called fields while the rows can be referred to as records.
-[!NOTE]
+ The columns in a table are called fields while the rows can be referred to as records. 
+```
+> [!NOTE]
 >Records
 >A record consists of a collection of data for each entity. It’s also known as a row in the table.
 
-> 
-   ```
 #### Object oriented DB or entitty : 
    ```Entity is object that is attributes that are like columns or fields : 
     each columun: hold the different types of data like numeric and string data
