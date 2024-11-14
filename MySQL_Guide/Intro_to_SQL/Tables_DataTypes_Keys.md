@@ -64,14 +64,15 @@ and data type.  */
   This is also known as a composite primary key.
 */
 
---Foregin key: 
---*it REFERENCES as a UNIQUE key in another table
+#### Foregin key: 
+``` diff
+--it REFERENCES as a UNIQUE key in another table
 --Tables are linked with one another through a key column (the primary key) of one table that’s
 --also present in the related table as a foreign key.
 
 --Alternate Key:  It is the key that is not selected to be a primary key, it is a columun that contains a unique value in each field.
 --Secondary Key: 
-
+```
 ### Constraints in SQL
 ```
  Constraints are used to specify the rules concerning data in the table. It can be
@@ -80,25 +81,26 @@ and data type.  */
  ```
 ##### The constraints are:
 ```diff
-1.  - 'NOT NULL' - Restricts NULL value from being inserted into a column.
-2. - CHECK - Verifies that all values in a field satisfy a condition.
--- DEFAULT - Automatically assigns a default value if no value has been specified
- for the field.
--- UNIQUE - Ensures unique values to be inserted into the field.
--- INDEX - Indexes a field providing faster retrieval of records.
--- PRIMARY KEY - Uniquely identifies each record in a table.
--- FOREIGN KEY - Ensures referential integrity for a record in another table
+-1. 'NOT NULL' - Restricts NULL value from being inserted into a column.
+-2. CHECK - Verifies that all values in a field satisfy a condition.
+-3. DEFAULT - Automatically assigns a default value if no value has been specified for the field.
+-4. UNIQUE - Ensures unique values to be inserted into the field.
+-5. INDEX - Indexes a field providing faster retrieval of records.
+-6. PRIMARY KEY - Uniquely identifies each record in a table.
+-7. FOREIGN KEY - Ensures referential integrity for a record in another table
 
 ```
 ### Integrity constraints
 
+```diff 
 There are three main integrity constraints:
 
-1. Key constraints
+! 1. Key constraints
 
-2. Domain constraints
+! 2. Domain constraints
 
-3. Referential integrity constraints
+! 3. Referential integrity constraints
+```
 
 What are key constraints:- 
 
@@ -182,9 +184,6 @@ $\color{Blue}{Command-Description}$
 + text in green
 ! text in orange
 # text in gray
--- text in red highlight
-++ test in green highlight
-! orange highlight
 # grey highlight
 
 @@ text in purple (and bold)@@
