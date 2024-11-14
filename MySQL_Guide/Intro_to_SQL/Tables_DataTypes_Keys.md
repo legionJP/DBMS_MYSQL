@@ -53,25 +53,39 @@ Each table or relation in a database has its own schema. Schema simply means the
 + What is a primary key?
 ```
 ```
-1. In a table, there is a field or column that is known as a key which can uniquely identify a particular tuple (row) in a relation (table).
-2. This key is specifically known as a primary key.
+1. In a table, there is a field or column that is known as a key which can uniquely identify a particular tuple (row) in a relation (table), This key is specifically known as a primary key.
+2. It must contain UNIQUE values and has an implicit NOT NULL constraint.
+
+CREATE TABLE Students (  
+ID INT NOT NULL 
+Name VARCHAR(255) 
+PRIMARY KEY (ID) 
+);  /* Create table with a single field as primary key */ 
+```
+```diff
++ Composite Key
+```
+```
+In some cases, the primary key can comprise more than one column or field.
+This happens when a single column cannot make a record in a table uniquely identifiable.
+The primary key of this table is EMP_ID and DEPT_ID.these to can make records together UNIQUE
+This is also known as a composite primary key.
+```
+```diff
+- Foregin key:
+```  
+```
+- it REFERENCES as a UNIQUE key in another table Tables are linked with one another through a key column (the primary key) of one table that’s also present in the related table as a foreign key.
 ```
 
-/*In some cases, the primary key can comprise more than one column or field.
- This happens when a single column cannot make a record in a table uniquely identifiable.
- The primary key of this table is EMP_ID and DEPT_ID.these to can make records together UNIQUE
-  This is also known as a composite primary key.
-*/
-
-#### Foregin key: 
-``` diff
---it REFERENCES as a UNIQUE key in another table
---Tables are linked with one another through a key column (the primary key) of one table that’s
---also present in the related table as a foreign key.
-
---Alternate Key:  It is the key that is not selected to be a primary key, it is a columun that contains a unique value in each field.
---Secondary Key: 
+```diff
+! Alternate Key:
 ```
+```
+It is the key that is not selected to be a primary key, it is a columun that contains a unique value in each field.
+- Secondary Key: 
+```
+
 ### Constraints in SQL
 ```
  Constraints are used to specify the rules concerning data in the table. It can be
