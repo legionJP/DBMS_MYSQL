@@ -102,7 +102,7 @@ There are three main integrity constraints:
 ! 3. Referential integrity constraints
 ```
 
-What are key constraints:- 
+$\color{Blue}{key constraints:- }$
 
 The key constraint specifies that there should be a column, or columns, in a table that can be used to fetch data for any row.
 like primary key.  
