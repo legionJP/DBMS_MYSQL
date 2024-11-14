@@ -24,7 +24,7 @@
 -- like numeric data should be placed in the numeric domain and characters or string in the string domain  
 ```
 ### Data Types in the SQL:-
-```diff
+
 $\color{Green}{Numeric }$ : data types such as INT, TINYINT, BIGINT, FLOAT, REAL. 
 
 $\color{Green}{Date-time }$ :data types such as DATE, TIME, DATETIME. 
@@ -36,21 +36,18 @@ $\color{Green}{Binary }$ :such as BINARY, VARBINARY.
 $\color{Green}{Miscellaneous}$: Data types such as
 - Character Large Object (CLOB) for storing a large block of text in some form of text encoding.   
 - Binary Large Object (BLOB) for storing a collection of binary data such as images. 
-```
 
 > [!NOTE] 
 > In relational database terminology a table is also known as a relation.
-> A table row or a record is also known as a tuple. For example, the student relation above has six > tuples.
+> A table row or a record is also known as a tuple. For example, the student relation above has six
+> tuples.
 
+> [!IMPORTANT]
 Each table or relation in a database has its own schema. Schema simply means the structure. The structure includes:
-
-the name of the table or relation,  
-
-its attributes,  
-
-their names  
-
-and data type.  */
+>1. the name of the table or relation,  
+>2.  its attributes,  
+>3. their names  
+>4. and data type.  
 
 
 --What is a primary key?
