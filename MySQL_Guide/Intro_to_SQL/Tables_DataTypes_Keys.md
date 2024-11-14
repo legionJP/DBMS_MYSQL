@@ -25,13 +25,13 @@
 ```
 ### Data Types in the SQL:-
 
-$\color{Green}{Numeric }$ : such as INT, TINYINT, BIGINT, FLOAT, REAL. 
+$\color{Green}{Numeric }$ : data types such as INT, TINYINT, BIGINT, FLOAT, REAL. 
 
-$\color{Green}{Date and time data}$: types such as DATE, TIME, DATETIME. 
+$\color{Green}{Date and time }$ :data types such as DATE, TIME, DATETIME. 
 
-$\color{Green}{Character -&- string data:}$ types such as CHAR, VARCHAR. 
+$\color{Green}{Character-string}$ :data types such as CHAR, VARCHAR. 
 
-$\color{Green}{Binary }$:  such as BINARY, VARBINARY. 
+$\color{Green}{Binary }$ :such as BINARY, VARBINARY. 
 
 $\color{Green}{Miscellaneous data types such as}$: 
 - Character Large Object (CLOB) for storing a large block of text in some form of text encoding.   
