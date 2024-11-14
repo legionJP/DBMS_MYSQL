@@ -100,13 +100,45 @@ It is the key that is not selected to be a primary key, it is a columun that con
 -1. NOT NULL
 Restricts NULL value from being inserted into a column.
 ```
--2. CHECK - Verifies that all values in a field satisfy a condition.
--3. DEFAULT - Automatically assigns a default value if no value has been specified for the field.
--4. UNIQUE - Ensures unique values to be inserted into the field.
--5. INDEX - Indexes a field providing faster retrieval of records.
--6. PRIMARY KEY - Uniquely identifies each record in a table.
--7. FOREIGN KEY - Ensures referential integrity for a record in another table
+```diff
+-2. CHECK 
+Verifies that all values in a field satisfy a condition.
+```
+```diff
+-3. DEFAULT 
+Automatically assigns a default value if no value has been specified for the field.
+```
+```diff
+-4. UNIQUE 
+ Ensures unique values to be inserted into the field.
+ ```
+ ```diff
+-5. INDEX 
+ Indexes a field providing faster retrieval of records.
+ They improve the performance of data retrieval queries at the cost of additional storage and maintenance. Indexes are used to quickly locate data without having to search every row in a database table whenever a database table is accessed.
+Types of Indexes:
+1.	Unique Index: Ensures that the index key column does not have duplicate values.
+2.	Clustered Index: Alters the physical order of the table and search keys to match the index, making retrieval of data more efficient.
+3.	Non-Clustered Index: Does not alter the physical order of the table and maintains a logical order of the index.
+How Indexes Work:
+•	When an index is created on a column, the database stores a sorted copy of the indexed columns and pointers to the rows of the actual table.
+•	The index allows the database to find data much faster compared to scanning the entire table.
+Creating an Index:
+sql
+CREATE INDEX idx_customer_name ON customers (customer_name);
+Dropping an Index:
+sql
+DROP INDEX idx_customer_name ON customers;
 
+```
+```diff
+-6. PRIMARY KEY 
+ Uniquely identifies each record in a table.
+```
+```diff
+-7. FOREIGN KEY 
+Ensures referential integrity for a record in another table
+```
 
 ### Integrity constraints
 
