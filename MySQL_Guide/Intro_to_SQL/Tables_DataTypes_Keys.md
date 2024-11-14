@@ -49,10 +49,13 @@ Each table or relation in a database has its own schema. Schema simply means the
 >3. their names  
 >4. and data type.  
 
-
---What is a primary key?
---In a table, there is a field or column that is known as a key which can uniquely identify a particular tuple (row) in a relation (table).
---This key is specifically known as a primary key.
+```diff
++ What is a primary key?
+```
+```
+1. In a table, there is a field or column that is known as a key which can uniquely identify a particular tuple (row) in a relation (table).
+2. This key is specifically known as a primary key.
+```
 
 /*In some cases, the primary key can comprise more than one column or field.
  This happens when a single column cannot make a record in a table uniquely identifiable.
