@@ -79,6 +79,7 @@ and data type.  */
  after creating using the ALTER TABLE command. 
  ```
 ##### The constraints are:
+```diff
 1.  - 'NOT NULL' - Restricts NULL value from being inserted into a column.
 2. - CHECK - Verifies that all values in a field satisfy a condition.
 -- DEFAULT - Automatically assigns a default value if no value has been specified
@@ -88,6 +89,7 @@ and data type.  */
 -- PRIMARY KEY - Uniquely identifies each record in a table.
 -- FOREIGN KEY - Ensures referential integrity for a record in another table
 
+```
 ### Integrity constraints
 
 There are three main integrity constraints:
@@ -174,3 +176,11 @@ $\color{Blue}{Command-Description}$
 
 > [!CAUTION]
 > will share/write when applicable
+
+```diff
+- text in red
++ text in green
+! text in orange
+# text in gray
+@@ text in purple (and bold)@@
+```
