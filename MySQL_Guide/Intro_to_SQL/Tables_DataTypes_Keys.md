@@ -18,13 +18,13 @@
   ```
   columns and fields forms a rows in a relational database technology .  Rows also reffered as the tupels.
   ```
-  -->
+
 ## Data types : 
 --- In many DB as  they supports data types are the : String , Numeric, and the Ddate and time 
 
 #### Domain:
 ```
-A domain is a set of legal values that are assign to a attribute basically on the basis of the data type domain
+A domain is a set of legal values that are assign to a attribute basically on the basis of the data type domain.
 like numeric data should be placed in the numeric domain and characters or string in the string domain  
 ```
 ### Data Types in the SQL:-
@@ -53,42 +53,7 @@ Each table or relation in a database has its own schema. Schema simply means the
 >3. their names  
 >4. and data type.  
 
-```diff
-+ What is a primary key?
-```
-```
-1. In a table, there is a field or column that is known as a key which can uniquely identify a particular tuple (row) in a relation (table), This key is specifically known as a primary key.
-2. It must contain UNIQUE values and has an implicit NOT NULL constraint.
 
-CREATE TABLE Students (  
-ID INT NOT NULL 
-Name VARCHAR(255) 
-PRIMARY KEY (ID) 
-);  /* Create table with a single field as primary key */ 
-```
-```diff
-+ Composite Key
-```
-```
-In some cases, the primary key can comprise more than one column or field.
-This happens when a single column cannot make a record in a table uniquely identifiable.
-The primary key of this table is EMP_ID and DEPT_ID.these to can make records together UNIQUE
-This is also known as a composite primary key.
-```
-```diff
-- Foreign key:
-```  
-```
-It REFERENCES as a UNIQUE key in another table Tables are linked with one another through a key column (the primary key) of one table that’s also present in the related table as a foreign key.
-```
-
-```diff
-! Alternate Key:
-```
-```
-It is the key that is not selected to be a primary key, it is a columun that contains a unique value in each field.
-- Secondary Key: 
-```
 
 ### Constraints in SQL
 ```
@@ -116,21 +81,6 @@ Automatically assigns a default value if no value has been specified for the fie
  ```diff
 -5. INDEX 
  Indexes a field providing faster retrieval of records.
- They improve the performance of data retrieval queries at the cost of additional storage and maintenance. Indexes are used to quickly locate data without having to search every row in a database table whenever a database table is accessed.
-Types of Indexes:
-1.Unique Index: Ensures that the index key column does not have duplicate values.
-2.Clustered Index: Alters the physical order of the table and search keys to match the index, making retrieval of data more efficient.
-3.Non-Clustered Index: Does not alter the physical order of the table and maintains a logical order of the index.
-How Indexes Work:
-•	When an index is created on a column, the database stores a sorted copy of the indexed columns and pointers to the rows of the actual table.
-•	The index allows the database to find data much faster compared to scanning the entire table.
-+ Creating an Index:
--sql
-CREATE INDEX idx_customer_name ON customers (customer_name);
-+ Dropping an Index:
-- sql
-DROP INDEX idx_customer_name ON customers;
-
 ```
 ```diff
 -6. PRIMARY KEY 
@@ -173,6 +123,128 @@ Similarly, a contact number cannot exceed ten digits.
 ```
 ```
 When a table is related to another table via a foreign key column, then the referenced column value must exist in the other table.
+```
+
+
+```diff
++ 1. PRIMARY KEY
+```
+```
+1. In a table, there is a field or column that is known as a key which can uniquely identify a particular tuple (row) in a relation (table), This key is specifically known as a primary key.
+2. It must contain UNIQUE values and has an implicit NOT NULL constraint.
+
+CREATE TABLE Students (  
+ID INT NOT NULL 
+Name VARCHAR(255) 
+PRIMARY KEY (ID) 
+);  /* Create table with a single field as primary key */ 
+```
+```diff
++ 2. Composite Key
+```
+```
+In some cases, the primary key can comprise more than one column or field.
+This happens when a single column cannot make a record in a table uniquely identifiable.
+The primary key of this table is EMP_ID and DEPT_ID.these to can make records together UNIQUE
+This is also known as a composite primary key.
+```
+```diff
+- 3. Foreign key:
+```  
+```
+It REFERENCES as a UNIQUE key in another table Tables are linked with one another through a key column (the primary key) of one table that’s also present in the related table as a foreign key.
+Foreign key constraint ensures referential integrity in the relation between two tables.
+ The table with the foreign key constraint is labeled as the child table, and the table
+ containing the candidate key is labeled as the referenced or parent table.
+```
+### Example
+```
+/* Create table with foreign key - Way 1 */ 
+CREATE TABLE Students (  
+ID INT NOT NULL 
+Name VARCHAR(255) 
+LibraryID INT 
+PRIMARY KEY (ID) 
+FOREIGN KEY (Library_ID) REFERENCES Library(LibraryID) 
+); 
+
+/* 2. Create table with foreign key -*/ 
+CREATE TABLE Students (   
+ID INT NOT NULL PRIMARY KEY 
+Name VARCHAR(255) 
+LibraryID INT FOREIGN KEY (Library_ID) REFERENCES Library(LibraryID) 
+); 
+
+/* 3. Add a new foreign key */
+ALTER TABLE Students   
+ ADD FOREIGN KEY (LibraryID) 
+REFERENCES Library (LibraryID)
+```
+```diff
+! 4. Alternate Key:
+```
+```
+It is the key that is not selected to be a primary key, it is a columun that contains a unique value in each field.
+- Secondary Key: 
+```
+
+```diff
+- UNIQUE Constraint
+ A UNIQUE constraint ensures that all values in a column are different. This provides
+ uniqueness for the column(s) and helps identify each row uniquely. Unlike primary
+ key, there can be multiple unique constraints defined per table. The code syntax for
+ UNIQUE is quite similar to that of PRIMARY KEY and can be used interchangeably
+
+```
+##### Example:
+```
+/* 1. Create table with a single field as unique */ 
+ CREATE TABLE Students (   
+ID INT NOT NULL UNIQUE 
+Name VARCHAR(255) 
+); 
+
+/* 2.Create table with multiple fields as unique */ 
+
+CREATE TABLE Students (   
+ID INT NOT NULL 
+LastName VARCHAR(255) 
+FirstName VARCHAR(255) NOT NULL 
+CONSTRAINT PK_Student 
+UNIQUE (ID, FirstName) 
+); 
+
+ /* 3. Set a column as unique */
+ALTER TABLE Students   
+ ADD UNIQUE (ID); 
+ALTER TABLE Students   /* Set multiple columns as unique */
+ ADD CONSTRAINT PK_Student   /* Naming a unique constraint */
+ UNIQUE (ID, FirstName)
+```
+
+ ```diff
+- 5. INDEX 
+ Indexes a field providing faster retrieval of records.
+ They improve the performance of data retrieval queries at the cost of additional storage and maintenance. Indexes are used to quickly locate data without having to search every row in a database table whenever a database table is accessed.
+
++ Types of Indexes:
+- 1.Unique Index:
+ Ensures that the index key column does not have duplicate values.
+- 2.Clustered Index:
+ Alters the physical order of the table and search keys to match the index, making retrieval of data more efficient.
+- 3.Non-Clustered Index: 
+Does not alter the physical order of the table and maintains a logical order of the index.
+
+! How Indexes Work:
+•	When an index is created on a column, the database stores a sorted copy of the indexed columns and pointers to the rows of the actual table.
+•	The index allows the database to find data much faster compared to scanning the entire table.
+
++ Creating an Index:
+-sql
+CREATE INDEX idx_customer_name ON customers (customer_name);
++ Dropping an Index:
+- sql
+DROP INDEX idx_customer_name ON customers;
 ```
 
 ## Logical DATABASE Structure
