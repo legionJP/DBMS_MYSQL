@@ -182,5 +182,10 @@ $\color{Blue}{Command-Description}$
 + text in green
 ! text in orange
 # text in gray
+-- text in red highlight
+++ test in green highlight
+! orange highlight
+# grey highlight
+
 @@ text in purple (and bold)@@
 ```
