@@ -1,8 +1,8 @@
 ### 1. What is Database?
 ```diff
- -A database is an organized collection of data, stored and retrieved digitally from a
- -remote or local computer system. Databases can be vast and complex, and such
- -databases are developed using fixed design and modeling approaches.
+ - A database is an organized collection of data, stored and retrieved digitally from a
+ remote or local computer system. Databases can be vast and complex, and such
+ databases are developed using fixed design and modeling approaches.
 ```
  ### 2. What is DBMS?
  ```
