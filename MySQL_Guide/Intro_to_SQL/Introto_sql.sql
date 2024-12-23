@@ -109,16 +109,18 @@ DELETE FROM table_name WHERE condition;
 
 Data Control Language (DCL):-
 
-You use DCL to deal with the rights and permissions of users of a database system. You can execute SQL commands to perform different types of operations such as create and drop tables.
- To do this, you need to have user rights set up. This is called user privileges. 
+You use DCL to deal with the rights and permissions of users of a database system. 
+You can execute SQL commands to perform different types of operations such as create and drop tables.
+To do this, you need to have user rights set up. This is called user privileges. 
 
 GRANT:- Command to provide the user of the database with the privileges required to allow users to access and manipulate the database.
 
 REVOKE:-  Command to remove permissions from any user.
 
 Transaction Control Language (TCL) :-
-The TCL commands are used to manage transactions in the database. These are used to manage the changes made to the data in a table by utilizing the DML commands.
- It also allows SQL statements to be grouped together into logical transactions. 
+The TCL commands are used to manage transactions in the database. 
+These are used to manage the changes made to the data in a table by utilizing the DML commands.
+It also allows SQL statements to be grouped together into logical transactions. 
 
 COMMIT:- Command to save all the work you have already done in the database. 
 

@@ -34,7 +34,7 @@ so if we storing the "jen" it will take 3 btyes and 2 bytes of extra , total of 
 ---------------------------------------------
 select columun_name form tabel;
 
--- Insert selcet into statements :-
+-- Insert select into statements :-
 -- for populaitng the columun in the other tables
 
 --insert into SELECT statement is used to query a data from the a columun within the source table and 
@@ -92,5 +92,5 @@ DROP table shippers;
 
 
 
-alter table Orders dro                                  
+alter table Orders drop                                  
  foreign key FK_personOrder

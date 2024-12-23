@@ -85,6 +85,7 @@ Automatically assigns a default value if no value has been specified for the fie
 ```diff
 -6. PRIMARY KEY 
  Uniquely identifies each record in a table.
+ it use eIndex: Automatically creates a unique index on the primary key column(s) for fast retrieval.
 ```
 ```diff
 -7. FOREIGN KEY 
@@ -178,8 +179,10 @@ LibraryID INT FOREIGN KEY (Library_ID) REFERENCES Library(LibraryID)
 /* 3. Add a new foreign key */
 ALTER TABLE Students   
  ADD FOREIGN KEY (LibraryID) 
-REFERENCES Library (LibraryID)
+REFERENCES Library (LibraryID);
 ```
+
+
 ```diff
 ! 4. Alternate Key:
 ```
@@ -219,7 +222,7 @@ ALTER TABLE Students
  ADD UNIQUE (ID); 
 ALTER TABLE Students   /* Set multiple columns as unique */
  ADD CONSTRAINT PK_Student   /* Naming a unique constraint */
- UNIQUE (ID, FirstName)
+ UNIQUE (ID, FirstName);
 ```
 
  ```diff
@@ -246,6 +249,11 @@ CREATE INDEX idx_customer_name ON customers (customer_name);
 - sql
 DROP INDEX idx_customer_name ON customers;
 ```
+
+#### SQL Execution Order:
+
+FROM (includes join operations ) -->Where (Conditions) -->[ GroupBy --->Having ]---> SELECT( include aggregrate func. Count se)---> (Filter)Order BY --> Limit /offset 
+
 
 ## Logical DATABASE Structure
 

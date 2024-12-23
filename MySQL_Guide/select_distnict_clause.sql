@@ -5,4 +5,4 @@
 
 select distinct country_colmn from students_tb1;
 
-select colmun1, column2 from table ;     --distinct is giving error in the mysql 
+select colmun1, column2 from table ;     
