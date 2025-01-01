@@ -1,5 +1,5 @@
  ## Table:
-  ```
+  ``` diff
   A table is known as a entitty in a conceptual or logical way, made up of rows and columun and these have relations.
   So, A table is an organized collection of data stored in the form of rows and columns.
   Columns can be categorized as vertical and rows as horizontal.
