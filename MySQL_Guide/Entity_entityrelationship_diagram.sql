@@ -2,6 +2,14 @@
    it is comprised of rows and COLUMN in rdbms like in mysql
 
 
+- Entity Represents a real-world object
+- It Has attributes (fields)
+Example: A Student entity might have:
+- StudentID (Primary Key)
+- Name
+
+
+
  Types of attribute in a database system 
 
  1). simple attributes  : that can't be classified futher 
