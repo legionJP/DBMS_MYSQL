@@ -22,7 +22,8 @@ but related components;
 
 2).Postgre SQL: it is a namespace with named database objects , like views indexes and fuctions.
 
-3).Oracle: in this the schema is a property of each database  user.it assign a single schema to each user.
+3).Oracle: in this the schema is a property of each database  user.
+it assign a single schema to each user.
 ____________________________________________________________________________________________
 
 two important concepts of the database is :
