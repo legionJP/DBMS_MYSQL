@@ -61,7 +61,6 @@ MVCC (Multi-Version Concurrency Control)
 -- all the customer whose customerid is more than 25 
 -- list all the sales represntatvies 
 
-
 DROP TABLE IF EXISTS emp;
 
 CREATE TABLE emp (
