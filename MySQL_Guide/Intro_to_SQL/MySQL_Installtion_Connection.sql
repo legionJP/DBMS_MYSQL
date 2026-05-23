@@ -1,6 +1,25 @@
 
 -- # MySQL Archtitecture
 -------------------------------------------------------------------
+
+-- Client send the request to the server
+-- Server process the request and send the response to the client
+-- Query Cache : it is used to store the output of the query
+
+if the query written by client is identical in the cache then the server simply skip the parsing, optimization and even execution, it just simply display the output from the cache.
+Syntax Analysis , 
+-- Parser
+Semantics  Analysis after that parse tree is generated as output.
+
+InnoDB is storage engine 
+Supports ACID Transactions
+. Crash Recovery
+MVCC (Multi-Version Concurrency Control)
+- Enables non-blocking reads during writes
+- Improves performance in read-heavy workloads
+
+
+-- MySQL Archtitecture is divided into three layers
 --1. client layer 
 
 --it is  topmost layer in MYSQL
@@ -41,6 +60,8 @@
 -- all the customer whose customer_ID is less than 20 
 -- all the customer whose customerid is more than 25 
 -- list all the sales represntatvies 
+
+
 DROP TABLE IF EXISTS emp;
 
 CREATE TABLE emp (
